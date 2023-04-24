@@ -1,0 +1,259 @@
+/***General STYLING***/
+
+html {
+    scroll-behavior: smooth; /*this ensure that the page scrolling is smooth when the buttons on the nav bar is clicked */
+    border: 10px solid white;
+}
+/*Body*/
+body {
+    background-color:rgb(237, 231, 241);
+    margin: 0%;
+    opacity: 1;
+    font-family: Avant Grade, Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    overflow-x: hidden; /* this prevents the horizontal scroll bar from appearing when the quote is hovere over */
+}
+
+.Navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 50px;
+    width:97%;
+    z-index: 1;
+    text-align: right;
+    
+}
+.Navbar a{
+    text-align: right;
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5vw;
+
+}
+#Slideshow_Background {
+    background:rgb(237, 231, 241); /* This creates a slightly transparent white background that's palced over the video in the background */    
+}
+
+.mySlides{
+    display: none;  /* This prevents the images from being displayed, we will use JS to display these */
+}
+/* Slideshow sectionc /container */
+#Slideshow_Container {
+    width: 30vw; /* relative sizing of the container for the slideshow set to 39.5 of the viewpoert width */
+    height: auto; /* The height of the container is automatically adjusted based on the content it is displaying */
+    padding-top: 10%;  /* Adds a small padding to the top of the slideshow container */
+    position: relative;  /* This sets the container relative to its normal positioning */
+    margin: auto; /* This will horizontally center the container on the page */
+
+}
+
+/* Remove the underline from the previous and next buttons on the slideshow */
+#Slideshow_Container a {
+    text-decoration: none;
+}
+
+/* Images containdes within the slideshow */
+
+.Slideshow_Images {
+    vertical-align: middle; /* This centers the images vertically within the slideshow container */
+    height: auto; /* The height of the images is automatically adjusted based on the content, ie if your images are different sizes, they will display as different sizes */
+    box-shadow: 0px 5px 10px 12 px rgba(203, 167, 167, 0.75); /* Adds a shadow around the slideshow images */
+    width: 100%; /* The width of the images is automatically adjusted based on the content */
+    border-radius: 5%;
+}
+
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer; /* Changes the mouse to a pointer when the buttons are selected */
+    position: absolute; /* This makes the next and previous buttons positioned relative to the slideshow container */
+    width: auto; /* The width of the buttons is automatically adjusted based on the content */
+    padding: 1vw; /* Adds padding equal to 2% of the viewport width */
+    color: white; 
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 3%; /* Adds a slightly rounded border on the top and bottom right corners */
+    user-select: none; /* This property makes it so that the user cannot highlight the text */
+    transition: 0.6s ease; /* This specifies the details of the hover transition for these elements */
+}
+
+/* Positioning the next button on the right hand side */
+.Next {
+    right: 30vw; /* This moves the next button to the right side of the slideshow container */
+    top: 25vw;
+    border-radius: 10px 10px 10px 10px; /* This changes the border radius on the next button to the top and bottom left of the button */
+}
+.Previous{
+    left: 30vw;
+    top: 25vw; /* This moves the next button to the right side of the slideshow container */
+    border-radius: 10px 10px 10px 10px; /* This changes the border radius on the next button to the top and bottom left of the button */
+}
+/* Hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+    background-color:rgb(208, 175, 175); /* Makes the background of the arrows a transparent gray color */
+    color: rgb(224, 193, 193); /* Makes the arrows white when hovered over */
+}
+
+/* Slideshow text */
+.text {
+    color:black; 
+    position: absolute; /* This ensures the text is positioned within the image */
+    bottom: 0; /* This property sets the text at the bottom of the image */
+    width: 100%; /* The element covers the full width of the image */
+    text-align: center; /* The text is center aligned within the image */
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; /* This gives slight spacing between the letters */
+    font-size: 1.5vw; /* Font size is relative to the size of the viewport width */
+    background-color: rgba(240, 232, 232, 0.75); /* Gives a slightly transparent black background */
+    font-weight: bold;
+    border-radius: 5%; /* Gives the text background rounded corners on the bottom left and right corners */
+}
+
+/* Styling of the dots under the slideshow */
+.dot {
+    cursor: pointer; /* The cursor changes to pointer when hovered over the dots */
+    height: 1vw; /* The dots are sized relative to the viewport width */
+    width: 1vw;
+    margin: .25vw; /* adds additional spacing between the dots */ 
+    background-color: grey; /* Makes the dots white */
+    border-radius: 50%; /* Makes the dots circles by rounding each corner */
+    display: inline-block; /* Allows the dots to sit next to eachother rather than on a new line */
+    transition: background-color 0.6s ease; /* When clicked on the dots transition to a different color when clicked or hovered over (the affect is defined below) */
+    z-index: 1; /* This ensures the dots will be displayed above any other elements */
+}
+
+/* Hover effect for slideshow dots */
+.active, .dot:hover {
+    background-color: black; /* Sets the color of the dots when active or hovered over */
+}
+
+
+/***** End Slideshow Styling *****/
+/***** Media Query Section *****/
+/*Media rules for paragraph font size for different screen sizes*/
+@media  screen and (max-width:375px) {
+    p {
+        font-size: 4vw;
+    }
+    
+}
+@media screen and (max-width: 527px) {
+    p {
+        font-size: 3.75vw;
+    }
+    img {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p {
+        font-size: 3.5vw;
+    }
+    img {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p {
+        font-size: 2.75vw;
+    }
+    img {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p {
+        font-size: 2.5vw;
+    }
+    img {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p {
+        font-size: 2.25vw;
+    }
+    img {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p {
+        font-size: 2vw;
+    } 
+    img {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p {
+        font-size: 1.75vw;
+    }
+    img {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p {
+        font-size: 1.5vw;
+    }
+    img {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 2270px) {
+    p {
+        font-size: 1.35vw;
+    }
+    img {
+        width: 70%;
+    }
+}
+
+/*Media rule for navbar links for different screen sizes*/
+/* Screens 1080px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 1080px) {
+    .Navbar a{
+        width: 20%; /* This sets each navbar link to 1/5 of the navbar */
+        font-size: 2.5vw;
+    }
+}
+
+/* Media rules to enlarge the font of the white text for smaller screens */
+@media screen and (max-width: 1080px) {
+    .quote{
+        font-size: 3.5vw;
+    }
+
+    .white-text {
+        font-size: 4.5vw;
+    }
+}
+
+/* Media rules to increase the size of the columns for larger screens */
+@media screen and (min-width: 1725px) {
+    .Column_1 {
+        height: 550px;
+    }
+    .Column_2 {
+        height: 550px;
+    }
+}
+
+
+/*Media rule to remove margin-top from h1 elements for extra large screens (so that the paragraph text fits in the column*/
+@media screen and (min-width: 2000px) {
+    h1{
+        margin-top: 0;
+    }
+}
+/***** End of Media Query Section *****/

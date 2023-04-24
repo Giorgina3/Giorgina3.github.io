@@ -1,0 +1,212 @@
+/***General STYLING***/
+
+html {
+    scroll-behavior: smooth; /*this ensure that the page scrolling is smooth when the buttons on the nav bar is clicked */
+    border: 10px solid white;
+}
+/*Body*/
+body {
+    background-color:rgb(237, 231, 241);
+    
+    display:flex;
+    flex-direction: column;
+    margin: 0%;
+    opacity: 1;
+    font-family: Avant Grade, Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+.Navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 50px;
+    width:97%;
+    z-index: 1;
+    text-align: right;
+    
+}
+.Navbar a{
+    text-align: right;
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5vw;
+
+}
+h1 {
+ font-size: 70px;
+}
+
+.Column_1{
+    text-align: center;
+    float: left;
+    margin: 180px 10px;
+    width: 50%;
+    padding:1.6%;
+    height:300px
+}
+
+.Column_2{
+    float:right;
+    position: relative;
+    object-fit: contain;
+}
+img{
+    padding-top :10vw;
+    padding-bottom: 5vw;
+    padding-right: 0vw;
+    height: 33vw;
+    border-radius: 60vw;
+    object-fit: contain;
+}
+
+footer{
+    margin-top: auto;
+    margin-bottom: auto;
+    position: fixed;
+   text-align: left;
+   bottom: 0px;
+   font-size: 18px;
+   display: flex; /*put the word next to each other */
+}
+footer a {
+    margin-top: auto;
+    text-decoration: none;
+    color:rgb(234, 181, 209); 
+    padding: 10px; /*word spacing*/
+
+}
+/***** Media Query Section *****/
+/*Media rules for paragraph font size for different screen sizes*/
+@media  screen and (max-width:375px) {
+    p {
+        font-size: 4vw;
+    }
+    
+img{
+   display: none;
+
+}
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 527px) {
+    p {
+        font-size: 3.75vw;
+    }
+    img{
+        border-radius: 40px;
+        size:40%;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p {
+        font-size: 3.5vw;
+    }
+
+    img{
+        border-radius: 40px;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p {
+        font-size: 2.75vw;
+    }
+
+    img{
+        border-radius: 40px;
+        position:relative;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p {
+        font-size: 2.5vw;
+    }
+  
+    img{
+        border-radius: 40px;
+        position:relative;
+    }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p {
+        font-size: 2.25vw;
+    }
+
+    img{
+        border-radius: 40px;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p {
+        font-size: 2vw;
+    } 
+
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p {
+        font-size: 1.75vw;
+    }
+ 
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p {
+        font-size: 1.5vw;
+    }
+
+}
+
+@media screen and (min-width: 2270px) {
+    p {
+        font-size: 1.35vw;
+    }
+  
+}
+
+/*Media rule for navbar links for different screen sizes*/
+/* Screens 1080px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 1080px) {
+    .Navbar a{
+        width: 20%; /* This sets each navbar link to 1/5 of the navbar */
+        font-size: 2.5vw;
+    }
+}
+
+/* Media rules to enlarge the font of the white text for smaller screens */
+@media screen and (max-width: 1080px) {
+    .quote{
+        font-size: 3.5vw;
+    }
+
+    .white-text {
+        font-size: 4.5vw;
+    }
+}
+
+/* Media rules to increase the size of the columns for larger screens */
+@media screen and (min-width: 1725px) {
+    .Column_1 {
+        height: 550px;
+    }
+    .Column_2 {
+        height: 550px;
+    }
+}

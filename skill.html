@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+        <link rel="stylesheet"  type="text/css" href="stylesheet/skill.css">
+        </head>
+    <body>
+       
+        <div class="Navbar">
+            <a href="index.html"style="float:left">Giorgiana</a>
+            <a href="about.html">About me</a>
+            <a href="skill.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <!-- Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+
+                        <!-- Slide 1 of 4-->
+                        <div class="mySlides fade">
+                             <img class="Slideshow_Images" src="img/program.png" alt="HTML CSS JAVASCRIPT">
+                             <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript</div>
+                        </div>
+                      
+                        <!-- Slide 2 of 4 -->
+                        <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="img/python.jpg" alt="Phyton">
+                            <div class="text">the popular programming language Phyton,</div>
+                        </div>
+                       
+                        <!-- Slide 3 of 4 -->
+                        <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="img/csharp.png" alt="C# logo">
+                            <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                        </div>
+
+                        <!-- Slide 4 of 4 -->
+                        <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="img/sql.jpg" alt="SQL logo">
+                            <div class="text"> back end development, databases and SQL,</div>
+                    </div>
+
+                </div>
+                   <!-- Previous and next buttons -->
+                   <a class="Previous" onlick="plusSlides(-1)">&#10094;</a>
+                   <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                   </div>
+                   <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                   <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                   <div style="text-align: center">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                      <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </div>
+        <script src="JS/skill.javascript.js"></script>
+    </body>
+</html>
