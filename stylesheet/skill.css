@@ -136,8 +136,37 @@ body {
     p {
         font-size: 4vw;
     }
+    #Slideshow_Container {
+        margin-top: 10vw;
+        margin-bottom:5vw;
+    }
+    .Previous, .Next {
+        margin-top: 50vw;
+    }
+    html{
+        margin-top: 40vw;
+    
+    }
     
 }
+
+@media screen and (min-width: 376px) and (max-width: 526px){
+
+    #Slideshow_Container {
+        margin-top: 10vw;
+        margin-bottom:5vw;
+    }
+    .Previous, .Next {
+        margin-top: 50vw;
+    }
+    html{
+        margin-top: 40vw;
+    
+    }
+    
+}
+
+
 @media screen and (max-width: 527px) {
     p {
         font-size: 3.75vw;
