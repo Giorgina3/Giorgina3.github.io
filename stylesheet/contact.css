@@ -107,11 +107,28 @@ button:hover, .form-container .btn:hover {
     p {
         font-size: 2vw;
     }
+    .form-container {
+        margin-top: 15vw;
+        margin-bottom: 10vw;
+    }
+    html{
+        margin-top: 40vw;
+    }
     
 img{
    display: none;
 
 }
+}
+@media screen and (min-width: 376px) and (max-width: 526px){
+
+    .form-container {
+        margin-top: 20vw;
+        margin-bottom: 15vw;
+    }
+    html{
+        margin-top: 50vw;
+    }
 }
 @media screen and (max-width: 527px) {
     p {
