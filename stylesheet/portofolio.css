@@ -91,12 +91,12 @@ img{
 
 }
 }
-
-
-
-
-
-
+@media screen and (min-width: 376px) and (max-width: 526px){
+img{
+   margin-top: 30vw;
+   margin-bottom: 10vw;
+}
+}
 
 @media screen and (max-width: 527px) {
     p {
